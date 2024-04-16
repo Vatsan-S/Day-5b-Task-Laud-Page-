@@ -1,0 +1,700 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --fs-heading:3rem;
+    --fs-heading2:1.25rem;
+    --fs-subheading:1.5rem;
+    --fs-body:1rem;
+    --fs-button:0.875rem;
+    --fs-xs:0.75rem;
+
+    --clr-primary:#1B1C1D;
+    --clr-secondary:#FFFFFF;
+    --clr-accent:#F2711C;
+    --clr-accent2:#DB2828;
+    --clr-neutral:#E0E1E2;
+    --clr-neutral2: #767777;
+
+    --ff-inter: "Inter", sans-serif;
+
+    --fw-normal: 400;
+    --fw-medium:500;
+    --fw-semi: 600;
+    --fw-bold:700;
+
+    /* mobile---  */
+    --fs--mob-heading:2rem;
+    --fs--mob-heading2:1rem;
+    --fs--mob-subheading:1.5rem;
+    --fs--mob-body:1rem;
+    --fs--mob-button:0.875rem;
+    --fs--mob-xs:0.75rem;
+}
+
+body{
+    font-family: var(--ff-inter);
+}
+.bg{
+    width: 100vw;
+}
+
+.container{
+    max-width: 60%;
+    margin: auto;
+}
+
+#nav{
+    background-color: var(--clr-primary);
+
+    padding:24px 0;
+}
+
+
+.nav-elements ul{
+    display: flex;
+    justify-content: flex-start;
+    gap: 24px;
+    
+    
+}
+
+.nav-elements li{
+    list-style-type: none;
+}
+.nav-elements li a{
+    color: var(--clr-secondary);
+    text-decoration: none;
+    font-family: var(--ff-inter);
+    font-size: var(--fs-button);
+}
+
+/* home  */
+
+#home{
+    background-color: var(--clr-primary);
+
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.home-content h1{
+   font-size: var(--fs-heading);
+   color: var(--clr-secondary);
+   font-weight: var(--fw-normal);
+   margin-bottom: 32px;
+}
+
+.home-content h3{
+    font-size: var(--fs-heading2);
+   color: var(--clr-secondary);
+   font-weight: var(--fw-normal);
+}
+
+
+/* about  */
+
+
+.about{
+    display: flex;
+    margin-top: 80px;
+    height: auto;
+    margin-bottom: 64px;
+}
+
+.abt-content{
+    width: 50%;
+}
+
+.abt-img{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: auto;
+}
+
+.img-frame{
+    
+    
+    max-width: 71.5%;
+    /* border: 1px solid #1B1C1D; */
+    display: flex;
+    
+    
+  
+}
+
+.img-frame img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    
+}
+.abt-content1{
+    margin-bottom: 64px;
+}
+
+.abt-content h3{
+    margin-bottom: 16px;
+    font-size: var(--fs-subheading);
+    font-weight: var(--fw-semi);
+    color: var(--clr-primary);
+}
+
+.abt-content p{
+    font-weight: var(--fw-normal);
+    color: var(--clr-primary);
+    opacity: .8;
+}
+
+/* buttons  */
+#buttons{
+    margin-bottom: 64px;
+}
+.btn-container{
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.btn-container button{
+    padding: 16px 24px;
+    border: none;
+    border-radius: 4px;
+
+}
+
+.btn-container button:nth-child(1){
+    background-color: var(--clr-neutral);
+}
+
+.btn-container button:nth-child(2){
+    background-color: var(--clr-accent2);
+    color: var(--clr-secondary);
+}
+
+.btn-container button:nth-child(3){
+    background-color: var(--clr-accent);
+    color: var(--clr-secondary);
+}
+.btn-container span{
+    margin-right: 8px;
+}
+
+/* quote  */
+
+.bg-quote{
+    background-color: var(--clr-primary);
+    padding: 64px 0;
+    font-size: var(--fs-subheading);
+    color: var(--clr-secondary);
+    font-weight: var(--fw-semi);
+
+}
+
+.bg-quote .container{
+    display: flex;
+    justify-content: center;
+}
+
+/* awards  */
+
+.awards-heading{
+    
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.awards{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 7% auto;
+    text-align: center;
+    align-items: center;
+    column-gap: 24px;
+}
+.awards::before, .awards::after{
+    content: "";
+    height: 1px;
+    background-color: var(--clr-neutral);
+    display: block;
+}
+
+.awards-title h3{
+font-size: var(--fs-heading2);
+font-weight: var(--fw-medium);
+
+}
+.star{
+    margin-right: 16px;
+    font-size: var(--fs-subheading);
+}
+
+.awards-content{
+    width: 100%;
+    
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    height: auto;
+}
+
+.awards-card{
+    border: solid var(--clr-neutral) 1px;
+    border-radius: 4px;
+    padding: 8px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    height: 100px;
+
+}
+
+.awards-card h3{
+    font-size: var(--fs-body);
+    font-weight: var(--fw-medium);
+    color: var(--clr-primary);
+
+}
+
+.awarded-year{
+    font-size: var(--fs-button);
+    color: var(--clr-neutral);
+    font-weight: var(--fw-normal);
+}
+
+.award-description{
+    font-size: var(--fs-button);
+    color: var(--clr-neutral2);
+    font-weight: var(--fw-normal);
+}
+
+
+/* others  */
+.others-container{
+    display: flex;
+    gap: 32px;
+
+}
+
+#others{
+    margin-top: 80px;
+}
+.poem{
+    
+    width: 50%;
+}
+.poetry-content, .poem-content{
+    padding: 32px;
+}
+.poetry{
+    
+    width: 50%;
+}
+
+.poetry li{
+    font-size: var(--fs-button);
+}
+
+.poem li{
+    font-size: var(--fs-button);
+
+}
+.poem-heading-container{
+    display: grid;
+    grid-template-columns: auto 41% auto;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 48px;
+}
+.poem-heading-container::before, .poem-heading-container::after{
+    content: "";
+    height: 1px;
+    background-color: var(--clr-neutral);
+    display: block;
+}
+
+/* footer  */
+
+#footer{
+    margin-top: 80px;
+    padding: 32px;
+    background-color: var(--clr-primary);
+    color: var(--clr-secondary);
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: 30% 25% auto;
+    gap: 40px;
+    font-size: var(--fs-button);
+    color: var(--clr-neutral);
+    font-weight: var(--fw-normal);
+}
+ 
+
+.author{
+    border-right: 1px var(--clr-neutral2) solid;
+}
+
+.techs{
+    border-right: 1px var(--clr-neutral2) solid;
+ 
+}
+
+.author-content{
+    font-size: var(--fs-xs);
+    color: var(--clr-neutral);
+    margin-top: 16px;
+}
+
+.author-content span{
+    color: var(--clr-neutral2);
+}
+
+.techs-content{
+    font-size: var(--fs-xs);
+    color: var(--clr-neutral);
+    margin-top: 16px;
+}
+
+.disclaimer-content{
+    font-size: var(--fs-xs);
+    color: var(--clr-neutral);
+    margin-top: 16px;
+}
+
+.disclaimer-content a{
+    text-decoration: none;
+}
+
+
+/* tablets-------- */
+@media screen and (min-width:600px) {
+   
+    .home-content h1{
+        margin-bottom: 16px;
+     }
+    
+
+    /* about-----  */
+    .about{
+        flex-direction: column;
+        margin-top: 24px;
+        gap: 32px;
+        margin-bottom: 32px;
+        text-align: center;
+    }
+    .abt-content{
+        width: 100%;
+    }
+    .abt-img{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        
+    }
+    .abt-content1{
+        margin-bottom: 24px;
+    }
+    
+    .abt-content h3{
+        margin-bottom: 16px;
+        font-size: var(--fs-subheading);
+    }
+
+    .abt-content p{
+        font-size: var(--fs-body);
+        line-height: 1.5;
+    }
+    
+    /* quote-----  */
+    .bg-quote{
+        background-color: var(--clr-primary);
+        padding: 64px 0;
+        font-size: var(--fs-heading2);
+        text-align: center;
+        
+    
+    }
+
+    /* awards--------  */
+    .awards{
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto 37% auto;
+        text-align: center;
+        align-items: center;
+        column-gap: 24px;
+    }
+
+    .awards-content{
+        
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+    .awards-card{
+        
+        height: 150px;
+    
+    }
+    /* others------  */
+    .others-container{
+        flex-direction: column;
+    
+    }
+    .poem{
+    
+        width: 100%;
+    }
+    .poetry{
+    
+        width: 100%;
+    }
+
+    /* footer-------  */
+    .footer{
+        
+        grid-template-columns:  auto;
+       
+    }
+    .author{
+        border-right: 0px var(--clr-neutral2) solid;
+    }
+    
+    .techs{
+        border-right: 0px var(--clr-neutral2) solid;
+     
+    }
+
+
+}
+
+/* laptops-------------- */
+@media screen and (min-width:990px) {
+
+    .home-content h1{
+        margin-bottom: 32px;
+     }
+    
+
+    /* about-----  */
+    .about{
+        flex-direction: row;
+        margin-top: 48px;
+        gap: 32px;
+        margin-bottom: 32px;
+        text-align: left;
+    }
+    .abt-content{
+        width: 100%;
+    }
+    .abt-img{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: auto;
+        
+    }
+    .abt-content1{
+        margin-bottom: 24px;
+    }
+    
+    .abt-content h3{
+        margin-bottom: 16px;
+        font-size: var(--fs-subheading);
+    }
+
+    .abt-content p{
+        font-size: var(--fs-body);
+        line-height: 1.5;
+    }
+    
+    /* quote-----  */
+    .bg-quote{
+        background-color: var(--clr-primary);
+        padding: 64px 0;
+        font-size: var(--fs-heading2);
+        text-align: center;
+        
+    
+    }
+
+    /* awards--------  */
+    .awards{
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto 37% auto;
+        text-align: center;
+        align-items: center;
+        column-gap: 24px;
+    }
+
+    .awards-content{
+        
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+    .awards-card{
+        
+        height: 150px;
+    
+    }
+    /* others------  */
+    .others-container{
+        flex-direction: column;
+    
+    }
+    .poem{
+    
+        width: 100%;
+    }
+    .poetry{
+    
+        width: 100%;
+    }
+
+    /* footer-------  */
+    .footer{
+        
+        grid-template-columns:  auto 30% auto;
+       
+    }
+    .author{
+        border-right: 1px var(--clr-neutral2) solid;
+    }
+    
+    .techs{
+        border-right: 1px var(--clr-neutral2) solid;
+     
+    }
+
+}
+/* mobiles-------------- */
+
+@media screen and (max-width:600px) {
+    .container{
+        max-width: 100%;
+        padding: 0 32px;
+        margin: auto;
+    }
+    .home-content h1{
+        font-size: var(--fs--mob-heading);
+        margin-bottom: 16px;
+     }
+     .home-content h3{
+        font-size: var(--fs--mob-heading2);
+    }
+
+    /* about-----  */
+    .about{
+        flex-direction: column;
+        margin-top: 24px;
+        gap: 32px;
+        margin-bottom: 32px;
+    }
+    .abt-content{
+        width: 100%;
+    }
+    .abt-img{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        
+    }
+    .abt-content1{
+        margin-bottom: 24px;
+    }
+    
+    .abt-content h3{
+        margin-bottom: 16px;
+        font-size: var(--fs--mob-subheading);
+    }
+
+    .abt-content p{
+        font-size: var(--fs--mob-button);
+        line-height: 1.5;
+    }
+    
+    /* quote-----  */
+    .bg-quote{
+        background-color: var(--clr-primary);
+        padding: 32px 0;
+        font-size: var(--fs--mob-heading2);
+        text-align: center;
+        
+    
+    }
+
+    /* awards--------  */
+    .awards{
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto 37% auto;
+        text-align: center;
+        align-items: center;
+        column-gap: 24px;
+    }
+
+    .awards-content{
+        
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+    .awards-card{
+        
+        height: 150px;
+    
+    }
+    /* others------  */
+    .others-container{
+        flex-direction: column;
+    
+    }
+    .poem{
+    
+        width: 100%;
+    }
+    .poetry{
+    
+        width: 100%;
+    }
+
+    /* footer-------  */
+    .footer{
+        
+        grid-template-columns:  auto;
+       
+    }
+    .author{
+        padding-bottom: 16px;
+        border-bottom: 1px var(--clr-neutral2) solid;
+        border-right: 0px var(--clr-neutral2) solid;
+
+    }
+    
+    .techs{
+        border-bottom: 1px var(--clr-neutral2) solid;
+        border-right: 0px var(--clr-neutral2) solid;
+
+        padding-bottom: 16px;
+     
+    }
+
+
+}
